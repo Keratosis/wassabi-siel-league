@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Games from './Games';
 
 
 function Table({key,}){
@@ -7,17 +6,19 @@ function Table({key,}){
     <div>
 <table>
   <thead>
-    <th>game no</th>
-    <th>HOME</th>
-    <th>vs</th>
-    <th>AWAY</th>
-    <th>CONFERENCE</th>
-    <th>DAY</th>
-    <th>TIME</th>
-    <th>COURT</th>
-    <th>LOCATION</th>
-    <th>RESULTS</th>
-    <th>NOTES</th>
+    <tr>
+    <td>game no</td>
+    <td>HOME</td>
+    <td>vs</td>
+    <td>AWAY</td>
+    <td>CONFERENCE</td>
+    <td>DAY</td>
+    <td>TIME</td>
+    <td>COURT</td>
+    <td>LOCATION</td>
+    <td>RESULTS</td>
+    <td>NOTES</td>
+    </tr>
   </thead>
 </table>
 
