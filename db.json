@@ -1,20 +1,5 @@
 {
   "games":[
-    
-        {
-            "GAME": "MARCH",
-            "HOME": "",
-            "": "",
-            "AWAY": "",
-            "CONFERENCE": "",
-            "DAY": "",
-            "DATE": "",
-            "TIME": "",
-            "COURT": "",
-            "LOCATION": "",
-            "RESULTS": "",
-            "NOTES": ""
-        },
         {
             "GAME": "GSLG01",
             "HOME": "SAVIO",
