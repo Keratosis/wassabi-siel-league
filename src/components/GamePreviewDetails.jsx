@@ -10,6 +10,7 @@ function GamePreviewDetails({ game }) {
       <p>Conference: {game.CONFERENCE}</p>
       <p>Score: {game.score1} - {game.score2}</p>
       <p>Location: {game.LOCATION}</p>
+      <p>note:{game.notes}</p>
     </div>
 
     </div>

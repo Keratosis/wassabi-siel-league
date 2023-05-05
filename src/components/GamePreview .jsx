@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GamePreviewTable from './GamePreviewTable';
 import GamePreviewDetails from './GamePreviewDetails';
+import SeasonLeader from './import React from \'react\';  function SeasonLeader({ games }) {   const sortedGames = games.sort((a, b) => b.score1 + b.score2 - (a.score1 + a.score2));    return (     <div>       <h2>Season Leader</SeasonLeader';
 
 
 function GamePreview() {
@@ -35,8 +36,13 @@ function GamePreview() {
               conference={game.CONFERENCE}
               onClick={() => handleGameClick(game)}
             />
+
+
+        
           </div>
         ))}
+
+<SeasonLeader games={games} /> 
       </div>
 
       {selectedGame && <GamePreviewDetails game={selectedGame} />}
