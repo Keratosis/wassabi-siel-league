@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GamePreviewTable from './GamePreviewTable';
 import GamePreviewDetails from './GamePreviewDetails';
 import SeasonLeader from './import React from \'react\';  function SeasonLeader({ games }) {   const sortedGames = games.sort((a, b) => b.score1 + b.score2 - (a.score1 + a.score2));    return (     <div>       <h2>Season Leader</SeasonLeader';
-
+import AddGames from './AddGames';
 
 function GamePreview() {
   const [games, setGames] = useState([]);
@@ -19,13 +19,17 @@ function GamePreview() {
     setSelectedGame(game);
   }
 
+  const handleAddGame = (newGame) => {
+    setGames([...games, newGame]);
+  }
+
   return (
     <div>
       <div className='container-1' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div className='head-1'>
           <h1>NBA Game Previews</h1>
         </div>
-      
+        <AddGames onAddGame={handleAddGame} />
         {games.map((game, index) => (
           <div key={index}>
             <GamePreviewTable

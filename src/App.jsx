@@ -7,6 +7,7 @@ import GamePreviewDetails from './components/GamePreviewDetails'
 import GamePreviewTable from './components/GamePreviewTable'
 import TeamInfo from './components/TeamInfo'
 import UpcomingMatches from './components/UpcomingMatches'
+import AddGames from './components/AddGames'
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
     <Link  className='link-3' to="/games">Games</Link>{" "}
     <Link  className='link-2' to="/preview">upcoming matchs</Link>{" "}
    <Link  className='link-1' to="/table">teams</Link>
+   <Link  className='link-0' to="/addgames">AddGames</Link>
 
   
   </nav> 
@@ -33,6 +35,7 @@ const App = () => {
   <Route path="/GAMES" element={<GamePreview/>} />
   <Route path="/preview" element={<UpcomingMatches/>} />
   <Route path="/table" element={<  TeamInfo/>} />
+  <Route path="/addgames" element={<  AddGames/>} />
 </Routes>
    
    
