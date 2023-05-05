@@ -18,3 +18,13 @@ Table,Tbody,thead,th,td{
     border:1px solid rgb(188, 192, 175)
   
 }
+.nav {
+  border: 2px solid #723a3a;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+.link-1 ,.link-2  ,.link-3,.link-4 {
+  color: #641313;
+margin: 5px;
+
+}

@@ -2349,7 +2349,36 @@
             "COURT": "KFC COURT",
             "LOCATION": "KOMAROCK"
         }
-    ]
-  
+    ],
+    
+    "team":[  {
+        "WESTERN CONFERENCE": [
+          "SAVIO",
+          "BANTU SPORTS",
+          "MOORE WRIGHT GROUP",
+          "OTEK BASKETBALL",
+          "HURUMA DRAGONS",
+          "JERICHO VIPERS",
+          "JUNUBIN",
+          "JERICHO NETS",
+          "TEAM EXPERIENCE",
+          "SWAT NATION",
+          "FEBA ACADEMY"
+        ],
+        "EASTERN CONFERENCE": [
+          "PRIDE LANDERS",
+          "TWENDE SPORTS",
+          "SUNRISE",
+          "FAM KENYA",
+          "CLIQUE MAMBAS",
+          "NASRA EAGLES",
+          "RUIRU BAPTIST",
+          "SEVEN ELEVEN",
+          "DEMENTERS",
+          "KIBRA",
+          "BURU CRUSADERS"
+        ]
+      }
+      ]
   
 }
