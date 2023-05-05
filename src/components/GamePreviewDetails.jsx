@@ -1,30 +1,19 @@
 import React from 'react';
 
-function GamePreviewDetails({ date, time, court, loc, results, notes }) {
+function GamePreviewDetails({ game }) {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Time</th>
-          <th>Court</th>
-          <th>Location</th>
-          <th>Results</th>
-          <th>Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{date}</td>
-          <td>{time}</td>
-          <td>{court}</td>
-          <td>{loc}</td>
-          <td>{results}</td>
-          <td>{notes}</td>
-        </tr>
-      </tbody>
-    </table>
-  );
+    <div>
+
+
+    <div className="game-preview-details">
+      <h2>{game.HOME} vs {game.AWAY}</h2>
+      <p>Conference: {game.CONFERENCE}</p>
+      <p>Score: {game.score1} - {game.score2}</p>
+      <p>Location: {game.LOCATION}</p>
+    </div>
+
+    </div>
+  )
 }
 
 export default GamePreviewDetails;

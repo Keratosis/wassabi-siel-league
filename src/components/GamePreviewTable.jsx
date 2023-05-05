@@ -1,28 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
 
-function GamePreviewTable({ home, away, conference }) {
+function GamePreviewTable({ home, away, conference, score1, score2, onClick }) {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Home</th>
-          <th>Away</th>
-          <th>Conference</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <Link to={`/table/${home}`}>{home}</Link>
-          </td>
-          <td>
-            <Link to={`/table/${away}`}>{away}</Link>
-          </td>
-          <td>{conference}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="game-preview-table"  onClick={onClick}>
+      <div className="team-info">
+        <div className="team-name" title={home + ' Details'}>{home}</div>{' '} vs
+        <div className="team-name" title={away + ' Details'}>{away}</div>
+      </div>
+      <div className="score">{score1} : {score2}</div>
+      <div className="conference">{conference}</div>
+    </div>
   )
 }
 
