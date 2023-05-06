@@ -7,6 +7,8 @@ import AddGames from './AddGames';
 function GamePreview() {
   const [games, setGames] = useState([]);
   const [selectedGame, setSelectedGame] = useState(null);
+  const [showDetails, setShowDetails] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     fetch('http://localhost:4003/games')
@@ -17,11 +19,18 @@ function GamePreview() {
 
   const handleGameClick = (game) => {
     setSelectedGame(game);
-  }
+    setShowDetails(true);
 
-  const handleAddGame = (newGame) => {
-    setGames([...games, newGame]);
-  }
+    // Hide the details after 5 seconds
+    setTimeout(() => {
+      setShowDetails(false);
+    }, 5000);
+  };
+
+  const filteredGames = games.filter(game => {
+    const searchRegex = new RegExp(searchTerm, 'i');
+    return searchRegex.test(game.HOME) || searchRegex.test(game.AWAY);
+  });
 
   return (
     <div>
@@ -29,8 +38,12 @@ function GamePreview() {
         <div className='head-1'>
           <h1>NBA Game Previews</h1>
         </div>
-        <AddGames onAddGame={handleAddGame} />
-        {games.map((game, index) => (
+
+        <div className='search-container'>
+          <input type='text' placeholder='Search games by team name' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+        </div>
+      
+        {filteredGames.map((game, index) => (
           <div key={index}>
             <GamePreviewTable
               home={game.HOME}
@@ -42,13 +55,14 @@ function GamePreview() {
               image2={game.IMAGE2}
               onClick={() => handleGameClick(game)}
             />
-        
           </div>
         ))}
 
-        <SeasonLeader games={games} /> 
+        <div className='season'>
+          <SeasonLeader games={filteredGames} />
+        </div> 
       </div>
-      {selectedGame && <GamePreviewDetails game={selectedGame} />}
+      {showDetails && selectedGame && <GamePreviewDetails game={selectedGame} />}
     </div>
   );
 }

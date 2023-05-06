@@ -16,7 +16,7 @@ function SeasonLeader({ games }) {
   }).sort((a, b) => b.score - a.score);
 
   return (
-    <div>
+    <div className='season'>
       <h2>Season Leader</h2>
       <table>
         <thead>

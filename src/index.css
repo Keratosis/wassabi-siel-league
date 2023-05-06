@@ -30,16 +30,7 @@ margin: 5px;
 
 }
 
-.game-preview-details {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 40%;
-  padding: 20px;
-  background-color: #161515;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
+
 
 .container-1{
   text-align: center;
@@ -76,7 +67,18 @@ position: relative;
   width: 50%;
   text-align: center;
 }
-.team-name:hover::before {
+.game-preview-details {
+ position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 20%;
+  height: fit-content;
+  padding: 20px;
+  background-color: #960c0c;
+  box-shadow: 0px 0px 10px rgba(161, 7, 7, 0.2);
+}
+.team-logo:hover::before {
   content: attr(title);
   position: absolute;
   top: -30px;
@@ -86,7 +88,7 @@ position: relative;
   padding: 5px;
   border: 1px solid rgb(104, 59, 59);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
+} 
 .vs {
   
   font-size: 20px;
@@ -113,36 +115,50 @@ position: relative;
 }
 
 .match-details {
-  background-color: #f1f1f1;
+  background-color: #141313;
   padding: 10px;
   border-radius: 4px;
 }
 
 .match-details p {
   margin: 0;
-  font-size: 16px;
+  font-size: 6px;
 }
-.upcoming-matches {
-
-  justify-content: center;
- 
-}
-
 .match-details {
-  background-image: url(https://images.pexels.com/photos/934083/pexels-photo-934083.jpeg?auto=compress&cs=tinysrgb&w=1600);
-  flex-direction: row;
-  background-color: #bd6666;
-  padding: 10px;
-  border-radius: 4px;
-  height: 847px;
-  background-repeat:no-repeat;
-  background-size: cover;
- width: 1279px;
- display: flex;
- color: #c20f18;
+background-image: url(https://content.cdn.sap.com/is/image/sap/GettyImages-57580930_WNBA_Exclusive:HeroL-3840x1044?wid=1920&hei=522&fit=stretch,1);
+height: 374px;
+}
 
-  
-  
+.team-0 {
+
+display: flex;
+justify-content: center;
+}
+
+.home {
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-style: oblique;
+font-display: initial;
+font-weight: bolder;
+color: rgba(210, 208, 243, 0.8); /* adjust opacity here */
+flex-direction: row;
+align-items: center;
+margin-right: 190px;
+}
+
+.away {
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-style: oblique;
+font-display: initial;
+font-weight: bolder;
+color: rgba(210, 208, 243, 0.8); /* adjust opacity here */
+flex-direction: row-reverse;
+align-items: center;
+margin-left: 190px;
+}
+
+.away img {
+  margin-left: 10px;
 }
 
 .match-date {

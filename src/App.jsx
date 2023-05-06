@@ -17,9 +17,9 @@ const App = () => {
 
   return (<>
    <nav className=' nav '>
-
-<Link className='link-4' to="/">Home</Link>   {""}
-    <Link  className='link-3' to="/games">Games</Link>{" "}
+   
+  <Link className='link-4' to="/">Home</Link>   {""}
+   <Link className='link-3' to="/games" title={<GamePreview />}>Games</Link>
     <Link  className='link-2' to="/preview">upcoming matchs</Link>{" "}
    <Link  className='link-1' to="/table">teams</Link>
    <Link  className='link-0' to="/addgames">AddGames</Link>

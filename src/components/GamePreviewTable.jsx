@@ -4,9 +4,10 @@ function GamePreviewTable({ home, away, conference, score1, score2, onClick, ima
   return (
     <div className="game-preview-table" onClick={onClick}>
       <div className="team-info">
-        <div className="team-logo">
+        <div className="team-logo" title={home+ '   '+  conference + score1  + ' Details'}>
+
           <img srcSet={image1} alt={home} />
-          <div className="team-name" title={home + ' Details'}>
+          <div className="team-name" >
             {home}
           </div>
         </div>
@@ -15,9 +16,9 @@ function GamePreviewTable({ home, away, conference, score1, score2, onClick, ima
         {score1} : {score2}
       </div>
       <div className="conference">{conference}</div></div>
-        <div className="team-logo">
+        <div className="team-logo" title={away+'   '+  conference + score1   + ' Details'}  >
           <img srcSet={image2} alt={away} />
-          <div className="team-name" title={away + ' Details'}>
+          <div className="team-name" >
             {away}
           </div>
         

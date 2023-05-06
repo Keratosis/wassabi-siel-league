@@ -28,10 +28,9 @@
           "LOCATION": "KOMAROCK",
           "score1": "50",
           "score2": "40",
-          "notes": "PLAYED",
-          "IMAGE1": "https://content.sportslogos.net/logos/6/218/thumbs/21870342016.gif",
-          "IMAGE2": "https://content.sportslogos.net/logos/6/227/thumbs/22770242021.gif"
-      },
+          "notes": "PLAYED" ,
+          "IMAGE1":"https://content.sportslogos.net/logos/111/6043/thumbs/604347732017.gif",
+          "IMAGE2":"https://content.sportslogos.net/logos/111/5144/thumbs/514489812014.gif" },
       {
           "GAME": "GSLG03",
           "HOME": "FEBA ACADEMY ",
@@ -510,8 +509,9 @@
           "score1": "",
           "score2": "",
           "notes": "",
-          "IMAGE1":"https://content.sportslogos.net/logos/6/214/thumbs/burm5gh2wvjti3xhei5h16k8e.gif",
-          "IMAGE2":"https://content.sportslogos.net/logos/6/231/thumbs/23143732019.gif"
+          "IMAGE1":"https://content.sportslogos.net/logos/228/6600/thumbs/660069572016.gif",
+          "IMAGE2":"https://content.sportslogos.net/logos/228/6594/thumbs/659462702005.gif"
+     
       },
       {
           "GAME": "GSLG29",
@@ -926,9 +926,10 @@
           "score1": "",
           "score2": "",
           "notes": "",
-          "IMAGE1":"https://content.sportslogos.net/logos/6/214/thumbs/burm5gh2wvjti3xhei5h16k8e.gif",
-          "IMAGE2":"https://content.sportslogos.net/logos/6/231/thumbs/23143732019.gif"
-      },
+          "IMAGE1":"https://content.sportslogos.net/logos/228/6600/thumbs/660069572016.gif",
+          "IMAGE2":"https://content.sportslogos.net/logos/228/6594/thumbs/659462702005.gif"
+     
+        },
       {
           "GAME": "GSLG50",
           "HOME": "KIBRA ",
@@ -1806,8 +1807,9 @@
           "score1": "",
           "score2": "",
           "notes": "",
-          "IMAGE1":"https://content.sportslogos.net/logos/6/214/thumbs/burm5gh2wvjti3xhei5h16k8e.gif",
-          "IMAGE2":"https://content.sportslogos.net/logos/6/231/thumbs/23143732019.gif"
+          "IMAGE1":"https://content.sportslogos.net/logos/228/6600/thumbs/660069572016.gif",
+          "IMAGE2":"https://content.sportslogos.net/logos/228/6594/thumbs/659462702005.gif"
+     
       },
       {
           "GAME": "GWLG23",
@@ -2062,9 +2064,10 @@
           "score1": "",
           "score2": "",
           "notes": "",
-          "IMAGE1":"https://content.sportslogos.net/logos/6/214/thumbs/burm5gh2wvjti3xhei5h16k8e.gif",
-          "IMAGE2":"https://content.sportslogos.net/logos/6/231/thumbs/23143732019.gif"
-      },
+          "IMAGE1":"https://content.sportslogos.net/logos/228/6600/thumbs/660069572016.gif",
+          "IMAGE2":"https://content.sportslogos.net/logos/228/6594/thumbs/659462702005.gif"
+     
+       },
       {
           "GAME": "GSLG117",
           "HOME": "JERICHO NETS",

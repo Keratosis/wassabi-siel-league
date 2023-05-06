@@ -32,19 +32,21 @@ function UpcomingMatches(){
   return (
     <div>
       <h2>Upcoming Matches</h2>
-      <div  className="match-details">
+      <div  className='match-details ' >
       <div className="match-date" >{DATE} - {DAY}</div>
       <br/>
-      <div>
+      <div className='team-0'>
+      <div className='home'>
         <img src={IMAGE1} alt={HOME} />
         <div>{HOME}</div>
       </div>
       vs
-      <div>
+      
+      <div className='away'>
         <img src={IMAGE2} alt={AWAY} />
         <div>{AWAY}</div>
       </div>
-     
+      </div>
       </div>
     </div>
   );
