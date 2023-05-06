@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GamePreviewTable from './GamePreviewTable';
 import GamePreviewDetails from './GamePreviewDetails';
 import SeasonLeader from './SeasonLeader';
-import AddGames from './AddGames';
+
 
 function GamePreview() {
   const [games, setGames] = useState([]);
@@ -32,13 +32,17 @@ function GamePreview() {
     return searchRegex.test(game.HOME) || searchRegex.test(game.AWAY);
   });
 
+  const handleAddGame = (newGame) => {
+    setGames(prevGames => [...prevGames, newGame]);
+  }
+
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
       <div className='container-1' style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div className='head-1'>
           <h1>NBA Game Previews</h1>
         </div>
-
+        <AddGames onAddGame={handleAddGame} />
         <div className='search-container'>
           <input type='text' placeholder='Search games by team name' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         </div>

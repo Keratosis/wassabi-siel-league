@@ -16,12 +16,18 @@ const App = () => {
 
 
   return (<>
-   
+   <nav className=' nav '>
+    <Link className='link-4' to="/">Home</Link>   {""}
+    <Link  className='link-3' to="/games">Games</Link>{" "}
+    <Link  className='link-2' to="/preview">upcoming matchs</Link>{" "}
+    <Link  className='link-1' to="/table">teams</Link>
+    <Link  className='link-5' to="/addgames">AddGames</Link>{" "}
+    
+    
+  </nav> 
   
-
-<Header />
-
 <Routes>
+  <Route path="/" element={<Header/>} />
   <Route path="/GAMES" element={<GamePreview/>} />
   <Route path="/preview" element={<UpcomingMatches/>} />
   <Route path="/table" element={<  TeamInfo/>} />
@@ -38,3 +44,4 @@ const App = () => {
 }
 
 export default App;
+
