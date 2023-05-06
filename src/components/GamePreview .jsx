@@ -11,7 +11,7 @@ function GamePreview() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:4003/games')
+    fetch('http://localhost:3000/games')
       .then(response => response.json())
       .then(data => setGames(data))
       .catch(error => console.error(error));

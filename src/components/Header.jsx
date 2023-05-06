@@ -1,9 +1,21 @@
+import { Link } from 'react-router-dom'
+
 const Header = ({ games }) => {
   console.log(games);
   const nextGame = games && games.find(game => new Date(game.date) > new Date());
 
   return (
-    <div>
+    <div className='header'>
+      <nav className=' nav '>
+
+          <Link className='link-4' to="/">Home</Link>   {""}
+          <Link  className='link-3' to="/games">Games</Link>{" "}
+          <Link  className='link-2' to="/preview">upcoming matchs</Link>{" "}
+          <Link  className='link-1' to="/table">teams</Link>
+          <Link  className='link-0' to="/addgames">AddGames</Link>
+
+
+      </nav> 
       <h1>GRIA SIEL/WEL 2023 SEASON GAMES.</h1>
       <h2>MARCH 4TH TO JULY 30TH</h2>
       KEY CONTACTS

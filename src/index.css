@@ -186,3 +186,8 @@ margin-left: 190px;
   font-weight: bold;
   margin-right: 5px;
 }
+.header {
+  background-image: url(https://dgiqkglfef83i.cloudfront.net/images/2021/11/1/Ball_Basket_A_21_NWU_MS_11902_71.jpg?width=1416&quality=80&format=jpg);
+
+  padding: 1rem;
+}
