@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GamePreviewTable from './GamePreviewTable';
 import GamePreviewDetails from './GamePreviewDetails';
-import SeasonLeader from './import React from \'react\';  function SeasonLeader({ games }) {   const sortedGames = games.sort((a, b) => b.score1 + b.score2 - (a.score1 + a.score2));    return (     <div>       <h2>Season Leader</SeasonLeader';
+import SeasonLeader from './SeasonLeader';
 import AddGames from './AddGames';
 
 function GamePreview() {
@@ -9,7 +9,7 @@ function GamePreview() {
   const [selectedGame, setSelectedGame] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:4002/games')
+    fetch('http://localhost:4003/games')
       .then(response => response.json())
       .then(data => setGames(data))
       .catch(error => console.error(error));
@@ -38,20 +38,17 @@ function GamePreview() {
               score1={game.score1}
               score2={game.score2}
               conference={game.CONFERENCE}
+              image1={game.IMAGE1}
+              image2={game.IMAGE2}
               onClick={() => handleGameClick(game)}
             />
-
-
         
           </div>
         ))}
 
-<SeasonLeader games={games} /> 
+        <SeasonLeader games={games} /> 
       </div>
-
       {selectedGame && <GamePreviewDetails game={selectedGame} />}
-    
-    
     </div>
   );
 }

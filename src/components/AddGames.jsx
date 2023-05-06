@@ -26,7 +26,7 @@ function AddGames({ onAddGame }) {
       notes: ''
     };
     
-    fetch('http://localhost:4002/games', {
+    fetch('http://localhost:4003/games', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newGame)
@@ -46,7 +46,6 @@ function AddGames({ onAddGame }) {
       })
       .catch(error => console.error(error));
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <h2>Add Game</h2>

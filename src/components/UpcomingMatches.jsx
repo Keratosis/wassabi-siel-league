@@ -1,30 +1,51 @@
 import React, { useState, useEffect } from 'react';
 
-const UpcomingMatches = () => {
+function UpcomingMatches(){
   const [upcomingMatches, setUpcomingMatches] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:4002/games')
+    fetch('http://localhost:4003/games')
       .then(response => response.json())
       .then(data => {
-        
         const upcomingGames = data.filter(game => !game.score1 && !game.score2);
-       
         upcomingGames.sort((a, b) => new Date(a.date) - new Date(b.date));
         setUpcomingMatches(upcomingGames);
       })
       .catch(error => console.error(error));
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(currentIndex => (currentIndex + 1) % upcomingMatches.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [upcomingMatches]);
+
+  if (upcomingMatches.length === 0) {
+    return <div>Loading...</div>;
+  }
+
+  const currentMatch = upcomingMatches[currentIndex];
+  const { HOME, AWAY, DATE, DAY, IMAGE1, IMAGE2 } = currentMatch;
+
   return (
     <div>
       <h2>Upcoming Matches</h2>
-      {upcomingMatches.map((game, index) => (
-        <div key={index}>
-          <p>{game.DATE} - {game.DAY}</p>
-          <p>{game.HOME} vs. {game.AWAY}</p>
-        </div>
-      ))}
+      <div  className="match-details">
+      <div className="match-date" >{DATE} - {DAY}</div>
+      <br/>
+      <div>
+        <img src={IMAGE1} alt={HOME} />
+        <div>{HOME}</div>
+      </div>
+      vs
+      <div>
+        <img src={IMAGE2} alt={AWAY} />
+        <div>{AWAY}</div>
+      </div>
+     
+      </div>
     </div>
   );
 };

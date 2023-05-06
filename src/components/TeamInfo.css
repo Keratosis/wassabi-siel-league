@@ -1,0 +1,36 @@
+.team-info-container {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .team-info-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .team-info-card {
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-logo {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 20px;
+  }
+  
+  .team-list {
+    text-align: left;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  .team-list p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
