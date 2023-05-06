@@ -33,8 +33,8 @@ function GamePreview() {
   });
 
   return (
-    <div>
-      <div className='container-1' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
+      <div className='container-1' style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div className='head-1'>
           <h1>NBA Game Previews</h1>
         </div>
@@ -58,11 +58,12 @@ function GamePreview() {
           </div>
         ))}
 
-        <div className='season'>
-          <SeasonLeader games={filteredGames} />
-        </div> 
+        {showDetails && selectedGame && <GamePreviewDetails game={selectedGame} />}
       </div>
-      {showDetails && selectedGame && <GamePreviewDetails game={selectedGame} />}
+
+      <div style={{ minWidth: '300px' }}>
+        <SeasonLeader games={filteredGames} />
+      </div>
     </div>
   );
 }
