@@ -198,6 +198,7 @@ margin-left: 190px;
 	position: relative;
 	overflow: hidden;
 	border-radius: 0 0 85% 85% / 30%;
+  text-align: center;
 }
 h2 {
   font-family: 'Open Sans', sans-serif;
