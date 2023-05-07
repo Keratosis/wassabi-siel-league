@@ -5,7 +5,7 @@ const TeamInfo = () => {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:4003/team`)
+    fetch(`https://siel-data.onrender.com/team`)
       .then(response => response.json())
       .then(data => {
         console.log(data);

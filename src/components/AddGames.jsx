@@ -29,7 +29,7 @@ function AddGames() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("http://localhost:3000/games", {
+    fetch("http://localhost:4004/games", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
