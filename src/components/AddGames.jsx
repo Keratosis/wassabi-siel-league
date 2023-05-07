@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddGames.css";
+import "./AddGame.css";
 
 function AddGames() {
   const [gameData, setGameData] = useState({
