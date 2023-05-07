@@ -13,15 +13,16 @@ const Header = ({ games }) => {
          
 GRIA SIEL LEAGUES OPERATIONS OFFICE
 HEAD OF COMMUNICATIONS: PAUL MACHARIA
-MOBILE: +254 723242389
-EMAIL: pmacharia@sielwelleague.co.ke
+<p>Phone: <a href="tel:+254 723242389">(254) 723-242-389</a></p> 
+<p>Email: <a href="mailto:pmacharia@sielwelleague.co.ke">pmacharia@sielwelleague.co.ke</a></p>
 
 OPERATION MANAGER: SHEM OTIENO
-MOBILE: +254 713 403 251
-EMAIL: somuta@sielwelleague.co.ke
+<p>Phone: <a href="tel:+254 713403251">(254) 713-403-251</a></p>
+<p>Email: <a href="mailto:somuta@sielwelleague.co.ke">somuta@sielwelleague.co.ke</a></p>
 
 OFFICIAL LEAGUE COMMUNICATIONS
-EMAIL: infor@sielwellleague.co.ke
+EMAIL: 
+<p>Email: <a href="mailto:infor@sielwellleague.co.ke">infor@sielwellleague.co.ke</a></p>
 
       {nextGame && (
         <div>
