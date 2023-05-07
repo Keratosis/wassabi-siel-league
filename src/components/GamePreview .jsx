@@ -11,7 +11,7 @@ function GamePreview() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3000/games')
+    fetch('http://localhost:4003/games')
       .then(response => response.json())
       .then(data => setGames(data))
       .catch(error => console.error(error));
@@ -42,7 +42,7 @@ function GamePreview() {
         <div className='head-1'>
           <h1>NBA Game Previews</h1>
         </div>
-        <AddGames onAddGame={handleAddGame} />
+        {/* <AddGames onAddGame={handleAddGame} /> */}
         <div className='search-container'>
           <input type='text' placeholder='Search games by team name' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         </div>
