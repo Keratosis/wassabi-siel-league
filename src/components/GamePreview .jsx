@@ -32,9 +32,9 @@ function GamePreview() {
     return searchRegex.test(game.HOME) || searchRegex.test(game.AWAY);
   });
 
-  const handleAddGame = (newGame) => {
-    setGames(prevGames => [...prevGames, newGame]);
-  }
+  // const handleAddGame = (newGame) => {
+  //   setGames(prevGames => [...prevGames, newGame]);
+  // }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
