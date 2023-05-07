@@ -187,9 +187,21 @@ margin-left: 190px;
   margin-right: 5px;
 }
 .header {
-  background-image: url(https://dgiqkglfef83i.cloudfront.net/images/2021/11/1/Ball_Basket_A_21_NWU_MS_11902_71.jpg?width=1416&quality=80&format=jpg);
-
-  padding: 1rem;
+  background-image: url(https://wallpaperset.com/w/full/8/9/0/65683.jpg);
+  width: 92.5%;
+	height: 100%;
+	padding: 50px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #333;
+  background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
 }
 
 .d-flex {
@@ -253,4 +265,9 @@ margin-left: 190px;
   background-color: #0069d9;
   border-color: #0062cc;
 }
-
+h1 {
+  font-style: italic;
+  font-family: 'Dancing Script', cursive;
+	font-size: 50px;
+	margin-bottom: 30px;
+}
