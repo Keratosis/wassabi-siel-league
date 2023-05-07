@@ -1,0 +1,52 @@
+.add-games-container {
+    background-color: #0b87f4;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .add-games-header {
+    text-align: center;
+    color: #1261ea;
+    font-size: 3rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  input {
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1.2rem;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
