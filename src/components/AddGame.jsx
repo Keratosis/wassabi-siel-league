@@ -22,7 +22,7 @@ function AddGames() {
  
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("http://localhost:3000/games", {
+    fetch("https://siel-data.onrender.com/games", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

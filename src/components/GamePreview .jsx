@@ -3,16 +3,14 @@ import GamePreviewTable from './GamePreviewTable';
 import GamePreviewDetails from './GamePreviewDetails';
 import SeasonLeader from './SeasonLeader';
 
-
-
 function GamePreview() {
   const [games, setGames] = useState([]);
   const [selectedGame, setSelectedGame] = useState(null);
   const [showDetails, setShowDetails] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
-useEffect(() => {
-    fetch('http://localhost:3000/games')
+  useEffect(() => {
+    fetch('https://siel-data.onrender.com/games')
       .then(response => response.json())
       .then(data => setGames(data))
       .catch(error => console.error(error));
@@ -28,12 +26,14 @@ useEffect(() => {
     }, 5000);
   };
 
+  const handleDeleteGame = (game) => {
+    setGames(prevGames => prevGames.filter(g => g !== game));
+  };
+
   const filteredGames = games.filter(game => {
     const searchRegex = new RegExp(searchTerm, 'i');
     return searchRegex.test(game.HOME) || searchRegex.test(game.AWAY);
   });
-
- 
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -58,7 +58,7 @@ useEffect(() => {
               image2={game.IMAGE2}
               onClick={() => handleGameClick(game)}
             />
-        
+            <button onClick={() => handleDeleteGame(game)}>Delete</button>
           </div>
         ))}
 
@@ -67,7 +67,6 @@ useEffect(() => {
 
       <div style={{ minWidth: '300px' }}>
         <SeasonLeader games={filteredGames} />
-       
       </div>
     </div>
   );
