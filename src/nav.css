@@ -1,0 +1,15 @@
+.nav {
+    border: 2px solid #f0e1e1;
+    background-color: #272626;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    font-size: 20px;
+  }
+  
+  .link-1 ,.link-2  ,.link-3,.link-4 ,.link-5{
+    color: #e4d9d9;
+    margin: 5px;
+  
+  
+  }

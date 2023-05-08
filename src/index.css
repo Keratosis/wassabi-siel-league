@@ -2,35 +2,33 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #201e1e;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-Table,Tbody,thead,th,td{
-  border-collapse: collapse;
-    border:1px solid rgb(188, 192, 175)
-  
-}
-.nav {
-  border: 2px solid #723a3a;
-  background-color: #fafafa;
-  border-radius: 5px;
-  height: 40px;
-}
-.link-1 ,.link-2  ,.link-3,.link-4 {
-  color: #641313;
-margin: 5px;
 
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px */
+  /* For example, mobile devices */
+  :root {
+    font-size: 14px;
+    /* Set smaller font size */
+  }
 }
 
-
+@media (min-width: 769px) {
+  /* Styles for screens larger than 768px */
+  /* For example, desktop screens */
+  :root {
+    font-size: 16px;
+    /* Set larger font size */
+  }
+}
 
 .container-1{
   text-align: center;

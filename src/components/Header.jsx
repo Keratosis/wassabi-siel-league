@@ -1,9 +1,7 @@
-import { Link } from 'react-router-dom'
+import React from "react";
 
-const Header = ({ games }) => {
-  console.log(games);
-  const nextGame = games && games.find(game => new Date(game.date) > new Date());
-
+const Header = () => {
+  
   return (
     <div className='header'>
       
@@ -24,19 +22,7 @@ OFFICIAL LEAGUE COMMUNICATIONS
 EMAIL: 
 <p>Email: <a href="mailto:infor@sielwellleague.co.ke">infor@sielwellleague.co.ke</a></p>
 
-      {nextGame && (
-        <div>
-          <p>Next Game:</p>
-          <div>
-            <span>{nextGame.AWAY}</span> vs <span>{nextGame.HOME}</span> - <span>{nextGame.score1}</span>:{nextGame.score2}
-          </div>
-
-
-
-
-
-        </div>
-      )}
+      
     </div>
   )
 }

@@ -27,8 +27,20 @@ function GamePreview() {
   };
 
   const handleDeleteGame = (game) => {
-    setGames(prevGames => prevGames.filter(g => g !== game));
+    fetch(`https://siel-data.onrender.com/games/${game.id}`, {
+      method: 'DELETE'
+    })
+      .then(response => {
+        if (response.ok) {
+          setGames(prevGames => prevGames.filter(g => g !== game));
+          alert('The game has been successfully deleted.');
+        } else {
+          throw new Error('Failed to delete the game');
+        }
+      })
+      .catch(error => console.error(error));
   };
+  
 
   const filteredGames = games.filter(game => {
     const searchRegex = new RegExp(searchTerm, 'i');

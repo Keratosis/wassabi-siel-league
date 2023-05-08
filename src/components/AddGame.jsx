@@ -35,8 +35,9 @@ function AddGames() {
   }
 
   return (
+    <div>
     <div className="add-games-container">
-      <h2 className="add-games-header">Add Games</h2>
+    <h2 className="add-games-header">Add Games</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="game">
           Game:
@@ -194,6 +195,7 @@ function AddGames() {
         <br />
         <button type="submit" className="add-games-btn">Add Game</button>
       </form>
+    </div>
     </div>
   );
 }
