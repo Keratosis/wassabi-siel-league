@@ -4,14 +4,15 @@ import GamePreviewDetails from './GamePreviewDetails';
 import SeasonLeader from './SeasonLeader';
 
 
+
 function GamePreview() {
   const [games, setGames] = useState([]);
   const [selectedGame, setSelectedGame] = useState(null);
   const [showDetails, setShowDetails] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    fetch('https://siel-data.onrender.com/games')
+useEffect(() => {
+    fetch('http://localhost:3000/games')
       .then(response => response.json())
       .then(data => setGames(data))
       .catch(error => console.error(error));
@@ -32,9 +33,7 @@ function GamePreview() {
     return searchRegex.test(game.HOME) || searchRegex.test(game.AWAY);
   });
 
-  // const handleAddGame = (newGame) => {
-  //   setGames(prevGames => [...prevGames, newGame]);
-  // }
+ 
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -42,7 +41,7 @@ function GamePreview() {
         <div className='head-1'>
           <h1>NBA Game Previews</h1>
         </div>
-        {/* <AddGames onAddGame={handleAddGame} /> */}
+       
         <div className='search-container'>
           <input type='text' placeholder='Search games by team name' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         </div>
@@ -59,6 +58,7 @@ function GamePreview() {
               image2={game.IMAGE2}
               onClick={() => handleGameClick(game)}
             />
+        
           </div>
         ))}
 
@@ -67,6 +67,7 @@ function GamePreview() {
 
       <div style={{ minWidth: '300px' }}>
         <SeasonLeader games={filteredGames} />
+       
       </div>
     </div>
   );

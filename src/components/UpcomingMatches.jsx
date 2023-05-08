@@ -5,7 +5,7 @@ function UpcomingMatches(){
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    fetch('https://siel-data.onrender.com/games')
+    fetch('http://localhost:3000/games')
       .then(response => response.json())
       .then(data => {
         const upcomingGames = data.filter(game => !game.score1 && !game.score2);
