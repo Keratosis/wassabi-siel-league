@@ -4,7 +4,7 @@ import React from 'react';
 const Notfound = () => {
   return (
     <div className='notfound' >
-     404 /Notfound
+         <p >team not found!!</p>
     </div>
   );
 };

@@ -295,7 +295,13 @@ table,thead,tbody,td,tr,th{
   width: 735px;
   background-repeat: no-repeat;
  background-size: cover;
-
+color: rgb(5, 221, 236);
+font-size: larger;
+margin-top: 10px;
  background-image: url(https://cdn.nba.com/manage/2023/05/juliusrandle-29.jpg?w=735&h=413);
 
+}
+.notfound p{
+  margin-bottom: 300px;
+  font-weight: 700;
 }
