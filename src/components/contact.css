@@ -1,0 +1,65 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-repeat: no-repeat;
+   background-size: cover;
+   height: 900px;
+   background-image: url(https://cdn.nba.com/manage/2023/05/GettyImages-1252518497-1536x864.jpg);
+  }
+  
+  .contact-info {
+    background-color: hsl(0, 75%, 2%);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .contact-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-details div {
+    flex-basis: calc(33.33% - 1rem);
+    margin-bottom: 2rem;
+  }
+  
+  .contact-details p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-details a {
+    color: #554a4a;
+    text-decoration: none;
+  }
+  
+  .contact-details a:hover {
+    text-decoration: underline;
+    color: brown;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contact-details div {
+      flex-basis: 100%;
+    }
+  }
+  

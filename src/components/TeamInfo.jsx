@@ -18,7 +18,7 @@ const TeamInfo = () => {
     <div className="team-info-container">
       <h3>Team Info</h3>
       <div className="team-info-wrapper">
-        <div className="team-info-card">
+        <div className="team-info-card-1">
           <img className="team-logo" src='https://content.sportslogos.net/logos/6/1001/thumbs/100139262018.gif' alt="Western Conference Logo"/>
           <div className="team-list">
             {games.map((game, index) => (
@@ -30,7 +30,7 @@ const TeamInfo = () => {
             ))}
           </div>
         </div>
-        <div className="team-info-card">
+        <div className="team-info-card-2">
           <img className="team-logo" src='https://content.sportslogos.net/logos/6/999/thumbs/99995152018.gif' alt="Eastern Conference Logo"/>
           <div className="team-list">
             {games.map((game, index) => (

@@ -7,6 +7,9 @@ import TeamInfo from './components/TeamInfo'
 import UpcomingMatches from './components/UpcomingMatches'
 import AddGame from './components/AddGame'
 import  "./nav.css"
+import Contact from './components/Contact'
+
+
 
 
 const App = () => {
@@ -19,11 +22,14 @@ const App = () => {
        <img src="https://cdn.nba.com/logos/leagues/logo-nba.svg" alt="NBA logo" height="40" />
    </div>
   
-  <Link className='link-4' to="/">Home</Link>   {""}
-    <Link  className='link-3' to="/games">Games</Link>{" "}
-    <Link  className='link-2' to="/preview">matches</Link>{" "}
-    <Link  className='link-1' to="/table">teams</Link>{" "}
-    <Link  className='link-5' to="/ADDGames">AddGames</Link> 
+  <Link className='link-4' to="/">HOME</Link>   {""}
+    <Link  className='link-3' to="/games">GAMES</Link>{" "}
+    <Link  className='link-2' to="/preview">MATCHES</Link>{" "}
+    <Link  className='link-1' to="/table">TEAMS</Link>{" "}
+    <Link  className='link-5' to="/ADDGames">SETUP </Link> 
+    <Link  className='link-5' to="/contact">CONTACTS</Link> 
+    
+    
 
   </nav> 
   
@@ -33,6 +39,8 @@ const App = () => {
   <Route path="/preview" element={<UpcomingMatches/>} />
   <Route path="/table" element={<  TeamInfo/>} />
   <Route path="/ADDGames" element={<AddGame/>} />
+  <Route path="/contact" element={<Contact/>} />
+
 </Routes>
    
    

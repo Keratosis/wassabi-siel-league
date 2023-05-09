@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import GamePreviewTable from './GamePreviewTable';
 import GamePreviewDetails from './GamePreviewDetails';
 import SeasonLeader from './SeasonLeader';
+import Notfound from './Notfound';
+
 
 function GamePreview() {
   const [games, setGames] = useState([]);
@@ -48,38 +50,42 @@ function GamePreview() {
   });
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <div style={{ display: 'flex', flexDirection: 'row' ,backgroundColor:"black"}}>
       <div className='container-1' style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div className='head-1'>
           <h1>NBA Game Previews</h1>
         </div>
        
         <div className='search-container'>
-          <input type='text' placeholder='Search games by team name' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+          <input type='text' placeholder='Search games by team name'  size={45} value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         </div>
       
-        {filteredGames.map((game, index) => (
-          <div key={index}>
-            <GamePreviewTable
-              home={game.HOME}
-              away={game.AWAY}
-              score1={game.score1}
-              score2={game.score2}
-              conference={game.CONFERENCE}
-              image1={game.IMAGE1}
-              image2={game.IMAGE2}
-              onClick={() => handleGameClick(game)}
-            />
-            <button onClick={() => handleDeleteGame(game)}>Delete</button>
-          </div>
-        ))}
+        {filteredGames.length > 0 ? (
+          filteredGames.map((game, index) => (
+            <div key={index}>
+              <GamePreviewTable
+                home={game.HOME}
+                away={game.AWAY}
+                score1={game.score1}
+                score2={game.score2}
+                conference={game.CONFERENCE}
+                image1={game.IMAGE1}
+                image2={game.IMAGE2}
+                onClick={() => handleGameClick(game)}
+                onClickDelete={() => handleDeleteGame(game)} />
+            </div>
+          ))
+        ) : (
+          <Notfound/>
+        )}
 
         {showDetails && selectedGame && <GamePreviewDetails game={selectedGame} />}
       </div>
 
-      <div style={{ minWidth: '300px' }}>
+      <div style={{ minWidth: '400px' }}>
         <SeasonLeader games={filteredGames} />
       </div>
+
     </div>
   );
 }

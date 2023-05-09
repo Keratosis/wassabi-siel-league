@@ -30,17 +30,19 @@ function UpcomingMatches(){
   const { HOME, AWAY, DATE, DAY, IMAGE1, IMAGE2 } = currentMatch;
 
   return (
-    <div>
+    <div className='upcoming'>
       <h2>Upcoming Matches</h2>
       <div  className='match-details ' >
-      <div className="match-date" >{DATE} - {DAY}</div>
-      <br/>
+      <div className="match-date" >
+      <p>{DATE} - {DAY}</p>
+      </div>
+      
       <div className='team-0'>
       <div className='home'>
         <img src={IMAGE1} alt={HOME} />
         <div>{HOME}</div>
       </div>
-      vs
+      <div className='match-vs' >vs</div>
       
       <div className='away'>
         <img src={IMAGE2} alt={AWAY} />

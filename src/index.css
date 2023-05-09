@@ -4,7 +4,7 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #201e1e;
+  background-color: #000000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,6 +29,7 @@
     /* Set larger font size */
   }
 }
+
 
 .container-1{
   text-align: center;
@@ -58,6 +59,9 @@ position: relative;
   justify-content: space-between;
   width: 100%;
 }
+.team-info button{
+  color: #850b0b;
+}
 
 .team-name {
   position: relative;
@@ -67,13 +71,13 @@ position: relative;
 }
 .game-preview-details {
  position: fixed;
-  top: 0;
+  top: 70px;
   bottom: 0;
   right: 0;
-  width: 20%;
+  width: 30%;
   height: fit-content;
   padding: 20px;
-  background-color: #960c0c;
+  background-color: #720505;
   box-shadow: 0px 0px 10px rgba(161, 7, 7, 0.2);
 }
 .team-logo:hover::before {
@@ -88,8 +92,9 @@ position: relative;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 } 
 .vs {
-  
+  color: #114d92;
   font-size: 20px;
+  font-weight: bold;
 }
 
 
@@ -99,17 +104,26 @@ position: relative;
 } 
 
 
+
+
 .match-date {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10px;
+ margin-top: 130px;
+
 }
 
 .match-date p {
   margin: 0;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 28px;
+  color: #a80909;
+}
+.match-vs{
+  color: #850b0b;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .match-details {
@@ -138,7 +152,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 font-style: oblique;
 font-display: initial;
 font-weight: bolder;
-color: rgba(210, 208, 243, 0.8); /* adjust opacity here */
+color: rgba(6, 206, 6, 0.8); /* adjust opacity here */
 flex-direction: row;
 align-items: center;
 margin-right: 190px;
@@ -149,7 +163,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 font-style: oblique;
 font-display: initial;
 font-weight: bolder;
-color: rgba(210, 208, 243, 0.8); /* adjust opacity here */
+color: rgb(6, 206, 6,0.8); /* adjust opacity here */
 flex-direction: row-reverse;
 align-items: center;
 margin-left: 190px;
@@ -159,17 +173,13 @@ margin-left: 190px;
   margin-left: 10px;
 }
 
-.match-date {
- 
-  flex-direction: column;
-  align-items: center;
-  margin-right: 10px;
-}
+
 
 .match-date p {
-  margin: 0;
+  margin: 0px;
+  margin-bottom: 30px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 50px;
 }
 
 .match-teams {
@@ -180,24 +190,25 @@ margin-left: 190px;
 
 .match-teams p {
   margin: 0;
-  font-size: 16px;
+  font-size: 6px;
   font-weight: bold;
   margin-right: 5px;
 }
 .header {
-  background-image: url(https://wallpaperset.com/w/full/8/9/0/65683.jpg);
+  background-image: url(https://cdn.nba.com/manage/2023/05/GettyImages-1252518497-1536x864.jpg);
   width: 92.5%;
 	height: 100%;
 	padding: 50px;
+  height: 900px;
 	color: #FFF;
 	text-shadow: 1px 1px 1px #333;
   background-size: cover;
 	background-attachment: fixed;
-	position: relative;
-	overflow: hidden;
-	border-radius: 0 0 85% 85% / 30%;
   text-align: center;
+  color: #cc1010;
 }
+
+
 h2 {
   font-family: 'Open Sans', sans-serif;
 	margin-bottom: 30px;
@@ -267,7 +278,24 @@ h2 {
 h1 {
   font-style: italic;
   font-family: 'Dancing Script', cursive;
-	font-size: 30px;
+	font-size: 40px;
 	margin-bottom: 30px;
 }
 
+table,thead,tbody,td,tr,th{
+  border: 1px solid white;
+  border-collapse: collapse
+}
+
+.notfound{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 413px;
+  width: 735px;
+  background-repeat: no-repeat;
+ background-size: cover;
+
+ background-image: url(https://cdn.nba.com/manage/2023/05/juliusrandle-29.jpg?w=735&h=413);
+
+}
