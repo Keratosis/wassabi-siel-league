@@ -30,9 +30,13 @@ function AddGames() {
       body: JSON.stringify(gameData)
     })
       .then(response => response.json())
-      .then(data => console.log(data))
+      .then(data => {
+        console.log(data);
+        alert("The game has been successfully added.");
+      })
       .catch(error => console.log(error));
   }
+  
 
   return (
     <div>

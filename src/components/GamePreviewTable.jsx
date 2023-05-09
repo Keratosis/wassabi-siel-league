@@ -20,7 +20,7 @@ function GamePreviewTable({ home, away, conference, score1, score2, onClick, ima
       <div className="conference">{conference}</div>
       <button onClick={onClickDelete}>Delete</button>
       </div>
-        <div className="team-logo" onClick={onClick} title={away+'   '+  conference + score1   }  >
+        <div className="team-logo" onClick={onClick} title={away+'   '+  conference + score2   }  >
           <img srcSet={image2} alt={away} />
           <div className="team-name" >
             {away}
